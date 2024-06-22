@@ -7,7 +7,10 @@ cp ~/d3f4ult/password.sh ~/.termux/termux.properties
 # Make the script executable
 chmod +x ~/.termux/termux.properties
 
-# Add sourcing to .bashrc or .zshrc
+# Ensure the start-kali.sh script is executable
+chmod +x ~/start-kali.sh
+
+# Add sourcing to .bashrc if not already present
 if ! grep -q "source ~/.termux/termux.properties" ~/.bashrc; then
   echo "source ~/.termux/termux.properties" >> ~/.bashrc
 fi
