@@ -11,15 +11,15 @@ echo -e "\e[0m" # Reset text color
 
 read -sp "Password: " password
 
-# Replace 'your_password' with your actual password
+# Check for the password
 if [ "$password" == "d3f4ult" ]; then
     echo -e "\e[1;32m" # Set text color to green
     echo "\nWelcome d3f4ult"
     echo -e "\e[0m" # Reset text color
 
-    # Start Kali Linux via Andronix
+    # Start Kali Linux via start-kali.sh
     echo "Starting Kali Linux..."
-    ~/../usr/bin/proot-distro login kali
+    ~/start-kali.sh
 else
     echo -e "\e[1;31m" # Set text color to red
     echo "\nIncorrect password."
